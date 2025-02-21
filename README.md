@@ -34,75 +34,19 @@ Log-Analysis-Threat-Detection-System/
 
 ---
 
-## 🎯 Installation & Setup
-
-### 🔹 Step 1: Clone the Repository
-```sh
-git clone https://github.com/BhupendraMewada/Log-Analysis-Threat-Detection-System.git
-cd Log-Analysis-Threat-Detection-System
-```
-
-### 🔹 Step 2: Create a Virtual Environment
-```sh
-python -m venv myenv
-source myenv/bin/activate  # On Windows: myenv\Scripts\activate
-```
-
-### 🔹 Step 3: Install Dependencies
-```sh
-pip install -r requirements.txt
-```
-
-### 🔹 Step 4: Start FastAPI Backend
-```sh
-uvicorn main:app --reload --host 127.0.0.1 --port 8080
-```
-
-### 🔹 Step 5: Open the Web Interface
-➡️ **Go to:** `http://127.0.0.1:8080/`
 
 ---
 
-## 📡 API Endpoints
-### **1️⃣ Analyze a Single Log**
-```http
-POST /analyze-log/
-```
-**Request:**
-```json
-{ "log": "User attempted SQL Injection" }
-```
-**Response:**
-```json
-{ "log": "User attempted SQL Injection", "threat_detected": true, "anomaly_detected": false }
-```
+🔥 Future Enhancements
 
-### **2️⃣ Upload a Log File**
-```http
-POST /upload-logfile/
-```
-**Response:**
-```json
-{ "filename": "sample.log", "results": [...] }
-```
-
----
-
-## 📝 Sample Log Data
-**Example Log File (`logs/sample.log`)**
-```
-[2025-02-21 09:00:12] INFO - System: Windows Update completed successfully.
-[2025-02-21 12:30:50] ERROR - Security: Unauthorized USB device detected.
-[2025-02-21 13:10:30] ERROR - Network: Suspicious outbound traffic detected.
-```
-
----
-
-## 🔥 Future Enhancements
-🚀 **Add AI-based anomaly detection using deep learning.**
-🚀 **Improve UI with interactive charts and logs filtering.**
-🚀 **Deploy the system on cloud platforms (AWS, Azure, etc.).**
-
+🚀 Enhance AI-based anomaly detection using deep learning techniques.
+🚀 Improve UI with interactive visualizations and enhanced filtering.
+🚀 Enable multi-user support with role-based access controls.
+🚀 Integrate with SIEM (Security Information and Event Management) tools.
+🚀 Deploy the system on cloud platforms (AWS, Azure, Google Cloud).
+🚀 Implement real-time monitoring with live log tracking.
+🚀 Add support for multi-format log parsing (JSON, CSV, Syslog).
+🚀 Integrate email and SMS alerts for high-risk threat detection.
 ---
 
 ## 🤝 Contributing
