@@ -1,0 +1,6 @@
+[2025-02-21 12:05:25] WARNING - Security: Multiple failed login attempts detected for user 'admin'.
+[2025-02-21 12:30:50] ERROR - System: Unauthorized USB device detected on workstation 'HR-003'.
+[2025-02-21 12:50:15] WARNING - Security: Brute force attack detected from IP 45.67.89.101.
+[2025-02-21 13:10:30] ERROR - Network: Suspicious outbound traffic detected from IP 10.0.0.15.
+[2025-02-21 13:45:05] ERROR - Security: User 'unknown' attempted to access restricted folder '/server/finance/'.
+[2025-02-21 14:00:20] WARNING - Database: Unusual query pattern detected in database logs.

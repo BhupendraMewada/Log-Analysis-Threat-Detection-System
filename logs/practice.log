@@ -1,0 +1,17 @@
+[2025-02-21 08:45:30] INFO - System: Server started successfully
+[2025-02-21 08:50:12] INFO - User: User logged in successfully
+[2025-02-21 09:15:30] INFO - Database: Backup completed successfully
+[2025-02-21 09:20:45] INFO - Security: Firewall rules updated
+[2025-02-21 10:10:10] INFO - Network: Normal traffic detected
+
+[2025-02-21 10:30:12] WARNING - Security: Multiple failed login attempts detected
+[2025-02-21 10:35:00] ERROR - Database: SQL Injection attempt detected
+[2025-02-21 11:00:05] ERROR - Network: DDoS attack detected
+[2025-02-21 11:15:42] WARNING - Security: Unauthorized access attempt detected
+[2025-02-21 11:45:55] ERROR - System: Malware detected on server
+
+[2025-02-21 12:05:25] WARNING - Security: Unusual system behavior detected
+[2025-02-21 12:10:30] ERROR - System: User privilege escalation attempt detected
+[2025-02-21 12:45:50] INFO - Network: Sudden spike in outbound traffic
+[2025-02-21 13:00:00] ERROR - Database: Unauthorized data modification detected
+[2025-02-21 13:15:20] WARNING - Security: Unknown device connected to the network

@@ -1,0 +1,6 @@
+[2025-02-21 14:20:50] WARNING - System: Unexpected system reboot on server 'CORP-SRV-002'.
+[2025-02-21 14:45:12] ERROR - Network: Sudden spike in outbound traffic from workstation 'ENG-022'.
+[2025-02-21 15:00:05] WARNING - Security: User 'alice.jones' logged in from an unusual location (Russia).
+[2025-02-21 15:30:42] WARNING - Security: Employee 'mark.adams' requested admin access outside business hours.
+[2025-02-21 16:10:00] ERROR - System: Unauthorized script execution detected on server 'CORP-SRV-007'.
+[2025-02-21 16:45:30] WARNING - Security: Privilege escalation attempt detected for user 'intern01'.

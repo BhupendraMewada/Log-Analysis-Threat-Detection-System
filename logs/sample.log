@@ -1,0 +1,7 @@
+[2025-02-20 12:45:30] INFO - System: Server started successfully
+[2025-02-20 12:46:01] WARNING - Security: Unauthorized login attempt detected
+[2025-02-20 12:46:10] ERROR - Database: SQL Injection attempt detected
+[2025-02-20 12:46:15] INFO - System: Backup completed
+[2025-02-21 08:32:12] ERROR - Network: DDoS attack detected
+[2025-02-21 09:10:45] INFO - User: User logged in successfully
+[2025-02-21 09:15:30] WARNING - Security: High number of failed login attempts

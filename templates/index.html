@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Analysis & Threat Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        textarea, input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+
+        .reset-btn {
+            background-color: #dc3545;
+        }
+
+            .reset-btn:hover {
+                background-color: #a71d2a;
+            }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>🔍 Log Analysis & Threat Detection</h2>
+
+        <!-- Manual Log Entry -->
+        <form id="logForm">
+            <textarea name="log" id="log" placeholder="Enter a log entry..."></textarea>
+            <button type="submit">Analyze Log</button>
+            <button type="button" class="reset-btn" id="resetLog">Reset</button>
+        </form>
+
+        <!-- Log File Upload -->
+        <form id="fileForm" enctype="multipart/form-data">
+            <input type="file" id="fileUpload">
+            <button type="submit">Upload & Analyze File</button>
+            <button type="button" class="reset-btn" id="resetFile">Reset</button>
+        </form>
+
+        <!-- Results -->
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        document.getElementById("logForm").onsubmit = async function (event) {
+            event.preventDefault();
+            const log = document.getElementById("log").value;
+            const formData = new FormData();
+            formData.append("log", log);
+
+            const response = await fetch("/analyze-log/", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+            document.getElementById("result").innerHTML =
+                `<strong>Log:</strong> ${data.log}<br>
+                     <strong>Status:</strong>
+                     ${data.threat_detected ? "🚨 Threat Detected" : data.anomaly_detected ? "⚠️ Anomaly Detected" : "✅ Safe"}`;
+        };
+
+        document.getElementById("fileForm").onsubmit = async function (event) {
+            event.preventDefault();
+            const fileInput = document.getElementById("fileUpload").files[0];
+            const formData = new FormData();
+            formData.append("file", fileInput);
+
+            const response = await fetch("/upload-logfile/", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+            let output = `<h3>Analysis Results for ${data.filename}</h3>`;
+            data.results.forEach(log => {
+                output += `<p><strong>Log:</strong> ${log.log} <br>
+                           <strong>Status:</strong>
+                           ${log.threat_detected ? "🚨 Threat Detected" : log.anomaly_detected ? "⚠️ Anomaly Detected" : "✅ Safe"}</p>`;
+            });
+
+            document.getElementById("result").innerHTML = output;
+        };
+
+        document.getElementById("resetLog").onclick = function () {
+            document.getElementById("log").value = "";
+            document.getElementById("result").innerHTML = "";
+        };
+
+        document.getElementById("resetFile").onclick = function () {
+            document.getElementById("fileUpload").value = "";
+            document.getElementById("result").innerHTML = "";
+        };
+    </script>
+
+</body>
+</html>

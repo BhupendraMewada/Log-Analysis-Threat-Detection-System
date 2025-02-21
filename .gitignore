@@ -1,12 +1,7 @@
 # Ignore Virtual Environment
 myenv/
 
-# Ignore Log Files
-logs/
-*.log
 
-# Ignore ML Models
-models/
 
 # Ignore Python Cache Files
 __pycache__/
