@@ -5,6 +5,7 @@ The **Log Analysis & Threat Detection System** is a powerful tool designed to an
 
 ---
 
+
 ## 🛠️ Features
 ✅ **Real-time Log Analysis** – Detects security threats & anomalies from logs.
 ✅ **Machine Learning Integration** – Uses **TF-IDF + Random Forest** for anomaly detection.
@@ -12,6 +13,8 @@ The **Log Analysis & Threat Detection System** is a powerful tool designed to an
 ✅ **User-Friendly Web Interface** – Upload log files or manually enter logs for analysis.
 ✅ **FastAPI Backend** – High-performance backend with API endpoints.
 ✅ **Secure & Scalable** – Can be extended for corporate-level threat monitoring.
+✅ **Web-based Dashboard** – Interactive UI for log insights and security monitoring.
+✅ **Automated Alerts** – Real-time notifications for detected threats.
 
 ---
 
@@ -19,7 +22,6 @@ The **Log Analysis & Threat Detection System** is a powerful tool designed to an
 ```
 Log-Analysis-Threat-Detection-System/
 ├── main.py                 # FastAPI backend
-├── app.py                  # Streamlit (Optional if using HTML frontend)
 ├── log_parser.py           # Parses log files
 ├── threat_detector.py      # Detects security threats using Trie
 ├── anomaly_detector.py     # Uses ML to find anomalies
@@ -28,26 +30,24 @@ Log-Analysis-Threat-Detection-System/
 ├── logs/                   # Folder for storing sample log files
 ├── models/                 # Folder for storing trained ML models
 ├── static/                 # Static assets (CSS, JS)
-├── requirements.txt        # List of dependencies
 ├── README.md               # Project Documentation
 ```
 
 ---
 
+## 🔥 Future Enhancements
+🚀 **Enhance AI-based anomaly detection using deep learning techniques.**
+🚀 **Improve UI with interactive visualizations and enhanced filtering.**
+🚀 **Enable multi-user support with role-based access controls.**
+🚀 **Integrate with SIEM (Security Information and Event Management) tools.**
+🚀 **Deploy the system on cloud platforms (AWS, Azure, Google Cloud).**
+🚀 **Implement real-time monitoring with live log tracking.**
+🚀 **Add support for multi-format log parsing (JSON, CSV, Syslog).**
+🚀 **Integrate email and SMS alerts for high-risk threat detection.**
 
 ---
 
-🔥 Future Enhancements
 
-🚀 Enhance AI-based anomaly detection using deep learning techniques.
-🚀 Improve UI with interactive visualizations and enhanced filtering.
-🚀 Enable multi-user support with role-based access controls.
-🚀 Integrate with SIEM (Security Information and Event Management) tools.
-🚀 Deploy the system on cloud platforms (AWS, Azure, Google Cloud).
-🚀 Implement real-time monitoring with live log tracking.
-🚀 Add support for multi-format log parsing (JSON, CSV, Syslog).
-🚀 Integrate email and SMS alerts for high-risk threat detection.
----
 
 ## 🤝 Contributing
 💡 Pull requests are welcome! Feel free to fork the repo, make improvements, and submit a PR.
